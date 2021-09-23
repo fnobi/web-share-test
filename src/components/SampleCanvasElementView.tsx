@@ -101,7 +101,7 @@ const SampleCanvasElementView = () => {
     const imageFile = canvasToFile(canvas, "image.png", "image/png");
     window.navigator
       .share({
-        text: "シェアするよ",
+        text: "現在時刻をお知らせします",
         url: process.env.SITE_ORIGIN + basePath,
         files: imageFile ? [imageFile] : undefined
       })
