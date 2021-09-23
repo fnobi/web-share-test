@@ -5,6 +5,15 @@ import useCanvasAgent from "~/lib/useCanvasAgent";
 import SampleCanvasElementPlayer from "~/local/SampleCanvasElementPlayer";
 import { basePath } from "~/local/constants";
 
+declare global {
+  interface ShareData {
+    files?: File[];
+    text?: string;
+    title?: string;
+    url?: string;
+  }
+}
+
 const wrapperStyle = css({
   position: "fixed",
   top: percent(0),
