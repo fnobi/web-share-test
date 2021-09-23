@@ -19,16 +19,26 @@ const wrapperStyle = css({
   top: percent(0),
   left: percent(0),
   width: percent(100),
-  height: percent(100)
+  height: percent(100),
+  backgroundColor: "#333"
 });
 
 const canvasStyle = css({
+  position: "absolute",
+  top: em(1),
+  left: em(1),
+  bottom: em(1),
+  right: em(1),
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
   canvas: {
     position: "absolute",
     top: percent(0),
     left: percent(0),
     width: percent(100),
-    height: percent(100)
+    height: percent(100),
+    objectFit: "contain"
   }
 });
 

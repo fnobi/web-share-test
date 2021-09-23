@@ -1,5 +1,8 @@
 import { CanvasPlayer } from "~/lib/useCanvasAgent";
 
+const CANVAS_WIDTH = 1200;
+const CANVAS_HEIGHT = 630;
+
 const RECT_SIZE = 100;
 
 export default class SampleCanvasElementPlayer implements CanvasPlayer {
@@ -21,7 +24,8 @@ export default class SampleCanvasElementPlayer implements CanvasPlayer {
     if (!ctx || !canvas) {
       return;
     }
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = "#000000";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
     ctx.save();
     ctx.fillStyle = "#ff0000";
     ctx.translate(canvas.width / 2, canvas.height / 2);
@@ -37,9 +41,8 @@ export default class SampleCanvasElementPlayer implements CanvasPlayer {
 
   public resize() {
     const { canvas } = this;
-    const resolution = window.devicePixelRatio;
-    canvas.width = canvas.offsetWidth * resolution;
-    canvas.height = canvas.offsetHeight * resolution;
+    canvas.width = CANVAS_WIDTH;
+    canvas.height = CANVAS_HEIGHT;
     this.render();
   }
 
