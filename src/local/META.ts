@@ -11,7 +11,7 @@ const META: {
   DEFAULT_SHARE_IMAGE?: ImageMetaField;
   FAVICON_IMAGE?: ImageMetaField;
 } = {
-  TITLE: "hinagata-next",
+  TITLE: "web-share-test",
   DESCRIPTION: "Awsome next.js project.",
   KEYWORDS: ["next", "javascript"],
   URL: `${process.env.SITE_ORIGIN}${basePath}`,

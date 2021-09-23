@@ -11,7 +11,7 @@ workflows:
   build_deploy:
     jobs:
       - build_and_commit:
-          site_origin: https://hinagata-next.example.com
+          site_origin: https://web-share-test.example.com
           filters:
             branches:
               only:
