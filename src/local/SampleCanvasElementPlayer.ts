@@ -23,6 +23,7 @@ export default class SampleCanvasElementPlayer implements CanvasPlayer {
     }
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.save();
+    ctx.fillStyle = "#ff0000";
     ctx.translate(canvas.width / 2, canvas.height / 2);
     ctx.rotate((angle / 180) * Math.PI);
     ctx.fillRect(-RECT_SIZE / 2, -RECT_SIZE / 2, RECT_SIZE, RECT_SIZE);
